@@ -38,3 +38,6 @@ yarn-error.log*
 
 # vscode settings
 .vscode
+
+# eslint cache
+.eslintcache
