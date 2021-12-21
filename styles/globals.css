@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wrapper {
+  @apply min-h-screen flex flex-nowrap items-stretch justify-start flex-col font-sans;
+}
