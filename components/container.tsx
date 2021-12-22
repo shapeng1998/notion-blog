@@ -1,3 +1,4 @@
+import { PropsWithChildren } from 'react';
 import Head from 'next/head';
 import {
   title,
@@ -8,13 +9,15 @@ import {
   ogImageGenerateURL,
   author,
 } from 'blog.config';
+import Footer from './footer';
+import Header from './header';
 import type { CustomMeta } from 'lib/types';
 
-interface ContainerProps extends CustomMeta {
-  children: React.ReactNode;
+interface ContainerProps extends PropsWithChildren<CustomMeta> {
+  layout?: string;
 }
 
-const Container = ({ children, ...customMeta }: ContainerProps) => {
+const Container = ({ layout, children, ...customMeta }: ContainerProps) => {
   const imgTitle = `${ogImageGenerateURL}/${encodeURIComponent(title)}`;
   const meta = {
     title,
@@ -31,12 +34,14 @@ const Container = ({ children, ...customMeta }: ContainerProps) => {
   return (
     <>
       <Head>
+        {/* basic metadata */}
         <title>{meta.title}</title>
         <meta charSet="UTF-8" />
         <meta name="robots" content="follow, index" />
         <meta name="description" content={meta.description} />
         <meta name="keywords" content={meta.keywords} />
 
+        {/* open graph metadata */}
         <meta property="og:locale" content={meta.lang} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.description} />
@@ -47,6 +52,7 @@ const Container = ({ children, ...customMeta }: ContainerProps) => {
           content={meta.slug ? `${meta.url}/${meta.slug}` : meta.url}
         />
 
+        {/* twitter metadata */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:title" content={meta.title} />
@@ -62,10 +68,13 @@ const Container = ({ children, ...customMeta }: ContainerProps) => {
         )}
       </Head>
 
+      {/* page content */}
       <div className="wrapper">
+        <Header headerTitle={layout === 'blog' ? meta.title : undefined} />
         <main className="m-auto flex-grow w-full transition-all max-w-2xl px-4">
           {children}
         </main>
+        <Footer />
       </div>
     </>
   );

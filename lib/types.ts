@@ -29,4 +29,5 @@ export interface CustomMeta {
   slug?: string;
   date?: string;
   createdTime?: string;
+  layout?: string;
 }

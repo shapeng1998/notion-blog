@@ -17,12 +17,19 @@ import 'prismjs/components/prism-markup';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-bash';
+import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-json';
+import 'prismjs/components/prism-java';
 
 import type { AppProps } from 'next/app';
+import { LocaleProvider } from 'lib/locale';
 
-// TODO: add a language provider to the app
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <LocaleProvider>
+      <Component {...pageProps} />
+    </LocaleProvider>
+  );
 }
 
 export default MyApp;

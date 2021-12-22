@@ -41,3 +41,6 @@ yarn-error.log*
 
 # eslint cache
 .eslintcache
+
+# debug constants
+debug.ts

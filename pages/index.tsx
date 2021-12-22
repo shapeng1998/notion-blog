@@ -5,6 +5,8 @@ import Container from 'components/container';
 import { getAllPosts } from 'lib/get-all-posts';
 import type { PageProperties } from 'lib/types';
 
+// import debugConstants from 'debug';
+
 interface HomeProps {
   page: number;
   postsToShow: PageProperties[];
@@ -12,6 +14,7 @@ interface HomeProps {
 }
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  // const allPosts = debugConstants.allPosts;
   const allPosts = await getAllPosts();
 
   const postsToShow = allPosts.slice(0, postsPerPage);
