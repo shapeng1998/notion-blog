@@ -30,4 +30,7 @@ export interface CustomMeta {
   date?: string;
   createdTime?: string;
   layout?: string;
+  title?: string;
+  description?: string;
+  type?: 'article' | 'website';
 }

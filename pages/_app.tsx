@@ -10,6 +10,9 @@ import 'prismjs/themes/prism-okaidia.css';
 // used for rendering equations (optional)
 import 'katex/dist/katex.min.css';
 
+// global style overrides for notion
+import 'styles/notion.css';
+
 // here we're bringing in any languages we want to support for
 // syntax highlighting via Notion's Code block
 import 'prismjs';
@@ -23,12 +26,15 @@ import 'prismjs/components/prism-java';
 
 import type { AppProps } from 'next/app';
 import { LocaleProvider } from 'lib/locale';
+import { ThemeProvider } from 'next-themes';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <LocaleProvider>
-      <Component {...pageProps} />
-    </LocaleProvider>
+    <ThemeProvider attribute="class">
+      <LocaleProvider>
+        <Component {...pageProps} />
+      </LocaleProvider>
+    </ThemeProvider>
   );
 }
 

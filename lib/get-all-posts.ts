@@ -1,9 +1,9 @@
-import { notionPageId, sortByDate } from 'blog.config';
 import { idToUuid } from 'notion-utils';
+import { notionPageId, sortByDate } from 'blog.config';
 import { filterPublishedPosts } from './filter-published-posts';
 import { getAllPageIds } from './get-all-page-ids';
-import { notion } from './get-notion-api';
 import { getPageProperties } from './get-page-properties';
+import { getNotionRecordMap } from './get-notion-record-map';
 import type { PageProperties } from './types';
 
 /**
@@ -12,7 +12,7 @@ import type { PageProperties } from './types';
 export async function getAllPosts({
   includePages = false,
 }: { includePages?: boolean } = {}): Promise<PageProperties[]> {
-  const recordMap = await notion.getPage(notionPageId);
+  const recordMap = await getNotionRecordMap(notionPageId);
 
   // handle not database errors
   const notionPageUuid = idToUuid(notionPageId);

@@ -11,10 +11,13 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "expiry-map": "^1.1.0",
     "next": "12.0.7",
+    "next-themes": "^0.0.15",
     "notion-client": "^4.12.0",
     "notion-types": "^4.10.0",
     "notion-utils": "^4.12.0",
+    "p-memoize": "^6.0.1",
     "powered-by-vercel": "^1.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
