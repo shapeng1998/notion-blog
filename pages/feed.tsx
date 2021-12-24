@@ -1,8 +1,8 @@
-import { GetServerSideProps, NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
 import { generateRss } from 'lib/rss';
 import { getAllPosts } from 'lib/get-all-posts';
 
-const Feed: NextPage = () => null;
+const FeedPage: NextPage = () => null;
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const allPosts = await getAllPosts({ includePages: false });
@@ -17,4 +17,4 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   };
 };
 
-export default Feed;
+export default FeedPage;

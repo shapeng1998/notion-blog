@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { author, socialLink } from 'blog.config';
-import { PageProperties } from 'lib/types';
+import type { PageProperties } from 'lib/types';
 import formatDate from 'lib/format-date';
 
 interface PostHeadingProps {

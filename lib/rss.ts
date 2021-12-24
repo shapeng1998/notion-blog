@@ -1,5 +1,5 @@
 import { Feed } from 'feed';
-import { PageProperties } from './types';
+import type { PageProperties } from './types';
 import { title, description, link, author, lang, email } from 'blog.config';
 
 export function generateRss(posts: PageProperties[]) {
