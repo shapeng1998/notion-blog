@@ -5,7 +5,7 @@ import 'styles/globals.css';
 import 'react-notion-x/src/styles.css';
 
 // used for code syntax highlighting (optional)
-import 'prismjs/themes/prism-okaidia.css';
+import 'prism-themes/themes/prism-dracula.css';
 
 // used for rendering equations (optional)
 import 'katex/dist/katex.min.css';

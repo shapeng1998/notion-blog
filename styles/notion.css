@@ -18,3 +18,20 @@
 .notion-text {
   @apply leading-8 my-3;
 }
+
+.notion-code {
+  @apply border-[1px] rounded-lg bg-[#1f2937] dark:border-gray-700;
+}
+
+.notion-equation.notion-equation-block {
+  @apply hover:bg-transparent hover:cursor-auto focus:bg-transparent;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  @apply font-mono;
+}
+
+.notion-inline-code {
+  @apply text-black dark:text-white font-semibold before:content-['`'] after:content-['`'] bg-transparent p-1;
+}

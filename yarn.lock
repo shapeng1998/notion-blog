@@ -3921,6 +3921,11 @@ prettier@^2.5.1:
   resolved "https://registry.npmmirror.com/prettier/download/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
   integrity sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==
 
+prism-themes@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.nlark.com/prism-themes/download/prism-themes-1.9.0.tgz?cache=0&sync_timestamp=1631808907064&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fprism-themes%2Fdownload%2Fprism-themes-1.9.0.tgz#19c034f3205f1e28d75d89728e54ccd745f7e3dd"
+  integrity sha1-GcA08yBfHijXXYlyjlTM10X3490=
+
 prismjs@^1.20.0:
   version "1.25.0"
   resolved "https://registry.nlark.com/prismjs/download/prismjs-1.25.0.tgz?cache=0&sync_timestamp=1631809164387&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fprismjs%2Fdownload%2Fprismjs-1.25.0.tgz#6f822df1bdad965734b310b315a23315cf999756"

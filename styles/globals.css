@@ -20,20 +20,6 @@
   src: url('/fonts/IBMPlexSansVar-Italic.woff2') format('woff2');
 }
 
-/* scrollbar settings */
-body::-webkit-scrollbar {
-  width: 5px;
-}
-body::-webkit-scrollbar-track {
-  @apply bg-transparent;
-}
-body::-webkit-scrollbar-thumb {
-  @apply bg-gray-400 rounded;
-}
-.article-tags::-webkit-scrollbar {
-  width: 0 !important;
-}
-
 .wrapper {
   @apply min-h-screen flex flex-nowrap items-stretch justify-start flex-col font-sans;
 }
