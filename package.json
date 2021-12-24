@@ -1,6 +1,8 @@
 {
   "name": "notion-blog",
   "private": true,
+  "description": "A notion based blog template.",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
