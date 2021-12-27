@@ -15,6 +15,7 @@ const Footer = () => {
         <PoweredByVercel
           svgProps={{ width: 135, height: 28 }}
           utmSource="shapeng1998"
+          aria-label="Powered by Vercel"
         />
       </div>
     </footer>

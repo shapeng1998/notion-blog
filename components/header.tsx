@@ -54,7 +54,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="flex-shrink-0">
+    <nav className="flex flex-row items-center space-x-4">
       <ul className="flex flex-row space-x-4 items-center">
         {links.map(
           ({ id, name, to, show }) =>
@@ -69,8 +69,8 @@ const NavBar = () => {
               </li>
             )
         )}
-        <ToggleDarkModeButton />
       </ul>
+      <ToggleDarkModeButton />
     </nav>
   );
 };

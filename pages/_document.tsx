@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import type { DocumentContext } from 'next/document';
+import { lang } from 'blog.config';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -9,7 +10,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang={lang}>
         <Head />
         <body className="bg-day dark:bg-night transition-all">
           <Main />
