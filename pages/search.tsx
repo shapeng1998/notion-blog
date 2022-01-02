@@ -3,6 +3,7 @@ import { getAllPosts } from 'lib/get-all-posts';
 import { getAllTags } from 'lib/get-all-tags';
 import type { PageProperties } from 'lib/types';
 import SearchLayout from 'components/search-layout';
+import { REVALIDATE_TIME } from 'lib/constants';
 
 export interface SearchPageProps {
   tags: Record<string, number>;
@@ -22,6 +23,7 @@ export const getStaticProps: GetStaticProps<SearchPageProps> = async () => {
       tags,
       posts: allPosts,
     },
+    revalidate: REVALIDATE_TIME,
   };
 };
 
