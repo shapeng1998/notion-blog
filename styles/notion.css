@@ -23,7 +23,8 @@
   @apply border-[1px] rounded-lg bg-[#1f2937] dark:border-gray-700;
 }
 
-.notion-equation.notion-equation-block {
+.notion-equation.notion-equation-block,
+.notion-equation.notion-equation-inline {
   @apply hover:bg-transparent hover:cursor-auto focus:bg-transparent;
 }
 
