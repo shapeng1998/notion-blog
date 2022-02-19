@@ -17,7 +17,7 @@
     "classnames": "^2.3.1",
     "expiry-map": "^1.1.0",
     "feed": "^4.2.2",
-    "next": "12.0.7",
+    "next": "^12.1.0",
     "next-themes": "^0.0.15",
     "notion-client": "^4.12.0",
     "notion-types": "^4.10.0",
