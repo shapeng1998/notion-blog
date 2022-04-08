@@ -15,9 +15,7 @@ export function filterPublishedPosts({
   posts: PageProperties[];
   includePages: boolean;
 }): PageProperties[] {
-  if (!posts.length) {
-    return [];
-  }
+  if (!posts.length) return [];
 
   const publishedPosts = posts
     .filter((post) => {

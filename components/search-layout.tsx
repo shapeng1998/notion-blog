@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Search } from '@icon-park/react';
-import type { SearchPageProps } from 'pages/search';
+import cn from 'classnames';
 import Container from './container';
 import BlogPost from './blog-post';
-import cn from 'classnames';
+import type { SearchPageProps } from 'pages/search';
 
 interface SearchLayoutProps extends SearchPageProps {
   currentTag?: string;
@@ -15,9 +15,7 @@ const SearchLayout = ({ posts, tags, currentTag }: SearchLayoutProps) => {
   const filteredPosts = getFilteredPosts(searchValue);
 
   function getFilteredPosts(value: string) {
-    if (!posts) {
-      return [];
-    }
+    if (!posts) return [];
 
     return posts.filter((post) => {
       const postTags = post.tags ? post.tags.join(' ') : '';

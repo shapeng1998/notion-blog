@@ -1,10 +1,10 @@
-import { ExtendedRecordMap } from 'notion-types';
+import type { ExtendedRecordMap } from 'notion-types';
 import {
-  NotionRenderer,
-  Equation,
   Code,
   Collection,
   CollectionRow,
+  Equation,
+  NotionRenderer,
 } from 'react-notion-x';
 import { useChangeTheme } from 'lib/hooks';
 

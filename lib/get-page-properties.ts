@@ -41,25 +41,21 @@ export function getPageProperties(
     switch (propertyType) {
       case 'date': {
         const dateProperty = getDateValue(value);
-        if (dateProperty) {
-          properties.date = dateProperty;
-        }
+        if (dateProperty) properties.date = dateProperty;
+
         break;
       }
       case 'select': {
         const select = getTextContent(value);
         if (propertyName === 'type' || propertyName === 'status') {
-          if (select.length) {
-            properties[propertyName] = select;
-          }
+          if (select.length) properties[propertyName] = select;
         }
         break;
       }
       case 'multi_select': {
         const selects = getTextContent(value);
-        if (selects.length) {
-          properties.tags = selects.split(',');
-        }
+        if (selects.length) properties.tags = selects.split(',');
+
         break;
       }
       default:

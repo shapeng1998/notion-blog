@@ -27,8 +27,8 @@ import 'prismjs/components/prism-c';
 import 'prismjs/components/prism-cpp';
 
 import type { AppProps } from 'next/app';
-import { LocaleProvider } from 'lib/locale';
 import { ThemeProvider } from 'next-themes';
+import { LocaleProvider } from 'lib/locale';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

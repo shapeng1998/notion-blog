@@ -1,10 +1,10 @@
 import { idToUuid } from 'notion-utils';
-import { notionPageId, sortByDate } from 'blog.config';
 import { filterPublishedPosts } from './filter-published-posts';
 import { getAllPageIds } from './get-all-page-ids';
 import { getPageProperties } from './get-page-properties';
 import { getNotionRecordMap } from './get-notion-record-map';
 import type { PageProperties } from './types';
+import { notionPageId, sortByDate } from 'blog.config';
 
 /**
  * Return all posts' property stuff from Notion API.
@@ -20,9 +20,8 @@ export async function getAllPosts({
   if (
     rawMetaData.type !== 'collection_view_page' &&
     rawMetaData.type !== 'collection_view'
-  ) {
+  )
     throw new Error('Notion page is not a database!');
-  }
 
   // get schema and all page ids
   const schema = Object.values(recordMap.collection)[0].value.schema;

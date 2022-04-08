@@ -1,6 +1,6 @@
 import { Feed } from 'feed';
 import type { PageProperties } from './types';
-import { title, description, link, author, lang, email } from 'blog.config';
+import { author, description, email, lang, link, title } from 'blog.config';
 
 export function generateRss(posts: PageProperties[]) {
   const currentYear = new Date().getFullYear();

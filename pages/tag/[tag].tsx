@@ -1,10 +1,10 @@
+import type { ParsedUrlQuery } from 'querystring';
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import SearchLayout from 'components/search-layout';
 import { REVALIDATE_TIME } from 'lib/constants';
 import { getAllPosts } from 'lib/get-all-posts';
 import { getAllTags } from 'lib/get-all-tags';
-import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import type { SearchPageProps } from 'pages/search';
-import type { ParsedUrlQuery } from 'querystring';
 
 interface TagPageProps extends SearchPageProps {
   currentTag: string;
@@ -22,9 +22,8 @@ export const getStaticProps: GetStaticProps<
   TagPageProps,
   TagPageParams
 > = async (context) => {
-  if (!context.params) {
-    throw new Error('No params');
-  }
+  if (!context.params) throw new Error('No params');
+
   const currentTag = context.params.tag;
 
   const posts = await getAllPosts({ includePages: false });

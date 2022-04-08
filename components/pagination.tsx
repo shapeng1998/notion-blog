@@ -1,6 +1,6 @@
+import Link from 'next/link';
 import { INITIAL_PAGE_NUMBER } from 'lib/constants';
 import { useLocale } from 'lib/locale';
-import Link from 'next/link';
 
 interface PaginationProps {
   pageNumber: number;
@@ -11,11 +11,10 @@ const Pagination = ({ pageNumber, showNextPage }: PaginationProps) => {
   const locale = useLocale();
 
   let justifyContent = 'justify-between';
-  if (pageNumber === INITIAL_PAGE_NUMBER && showNextPage) {
+  if (pageNumber === INITIAL_PAGE_NUMBER && showNextPage)
     justifyContent = 'justify-end';
-  } else if (pageNumber !== INITIAL_PAGE_NUMBER && !showNextPage) {
+  else if (pageNumber !== INITIAL_PAGE_NUMBER && !showNextPage)
     justifyContent = 'justify-start';
-  }
 
   return (
     <div

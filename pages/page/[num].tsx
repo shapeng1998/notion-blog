@@ -1,6 +1,6 @@
+import type { ParsedUrlQuery } from 'querystring';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { postsPerPage } from 'blog.config';
-import type { ParsedUrlQuery } from 'querystring';
 import type { HomeProps } from 'pages/index';
 import { getAllPosts } from 'lib/get-all-posts';
 import { REVALIDATE_TIME } from 'lib/constants';
@@ -37,9 +37,8 @@ export const getStaticProps: GetStaticProps<
   PostListPageProps,
   PostListPageParams
 > = async (context) => {
-  if (!context.params) {
-    throw new Error('No params');
-  }
+  if (!context.params) throw new Error('No params');
+
   const pageNumber = +context.params.num;
 
   const posts = await getAllPosts({ includePages: false });

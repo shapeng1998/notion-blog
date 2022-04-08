@@ -1,6 +1,6 @@
+import Link from 'next/link';
 import formatDate from 'lib/format-date';
 import type { PageProperties } from 'lib/types';
-import Link from 'next/link';
 
 interface BlogPostProps {
   post: PageProperties;

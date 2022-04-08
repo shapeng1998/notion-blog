@@ -1,8 +1,8 @@
-import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { email } from 'blog.config';
 import { createHash } from 'crypto';
 import type { ParsedUrlQuery } from 'querystring';
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import type { ExtendedRecordMap } from 'notion-types';
+import { email } from 'blog.config';
 import type { PageProperties } from 'lib/types';
 import { getAllPosts } from 'lib/get-all-posts';
 import { REVALIDATE_TIME } from 'lib/constants';
@@ -47,9 +47,8 @@ export const getStaticProps: GetStaticProps<
   BlogPageProps,
   BlogPageParams
 > = async (context) => {
-  if (!context.params) {
-    throw new Error('No params');
-  }
+  if (!context.params) throw new Error('No params');
+
   const slug = context.params.slug;
 
   const allPosts = await getAllPosts({ includePages: true });

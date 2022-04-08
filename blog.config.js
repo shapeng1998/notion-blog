@@ -1,6 +1,6 @@
 module.exports = {
   // basic site info (required)
-  title: `Peng Sha's Blog`,
+  title: "Peng Sha's Blog",
   author: 'Peng Sha',
   email: 'jack@shapeng1998.com',
   link: 'https://blog.shapeng1998.com',

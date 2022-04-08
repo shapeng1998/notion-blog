@@ -1,16 +1,16 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import Head from 'next/head';
+import Footer from './footer';
+import Header from './header';
 import {
-  title,
+  author,
   description,
-  seo,
   lang,
   link,
   ogImageGenerateURL,
-  author,
+  seo,
+  title,
 } from 'blog.config';
-import Footer from './footer';
-import Header from './header';
 import type { CustomMeta } from 'lib/types';
 
 interface ContainerProps extends PropsWithChildren<CustomMeta> {

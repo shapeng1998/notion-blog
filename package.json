@@ -1,8 +1,8 @@
 {
   "name": "notion-blog",
+  "version": "0.1.0",
   "private": true,
   "description": "A notion based blog template.",
-  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -31,6 +31,7 @@
     "react-notion-x": "^4.12.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.20.2",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@types/node": "17.0.0",
